@@ -1,0 +1,45 @@
+<resources>
+
+    <!--activity_main.xml-->
+    <string name="possible_diseases_heading_text">Possible Diseases</string>
+    <string name="possible_disease_edittext_hint">Enter your symptom here(Eg. headache)</string>
+    <string name="search_button_text">Search</string>
+    <string name="no_disease_text">No Disease with this symptom found</string>
+
+    <!--MainActivity.java-->
+    <string name="exit_message">Do you want to Exit?</string>
+    <string name="search_url">http://138.197.120.102/CureMe/search.php</string>
+    <string name="no_internet_text">No Internet Connection available. Please connect to internet and try again</string>
+
+    <!--content_upcoming_features.xml-->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!--UpcomingFeatures.java-->
+    <string name="uf_url">http://138.197.120.102/customer/uf.txt</string>
+
+    <!--Disease_infomation.java-->
+    <string name="disease_info_url">http://138.197.120.102/CureMe/disease_info.php</string>
+
+    <!--Home_Remedy.java-->
+    <string name="home_remedy_url">http://138.197.120.102/CureMe/home_remedy.php</string>
+
+    <!--Emergency_Condition.java-->
+    <string name="emergency_condition_url">http://138.197.120.102/CureMe/emergency_condition.php</string>
+
+    <!--AndroidManifest.xml-->
+    <string name="app_name">Cure Me</string>
+    <string name="title_activity_search_result">SearchResult</string>
+
+    <!--activity_about_dev.xml-->
+    <string name="devName">Mrinalini Pal</string>
+    <string name="devEmail">minuapl95@gmail.com</string>
+    <string name="devPhone">7064622027</string>
+
+    <!--simple_widget.xml-->
+    <string name="list_textView">List</string>
+    <string name="aboutdevelopercontentdescription">AboutDeveloperContentDescription</string>
+    <string name="about_developer_textView">About Developer</string>
+    <string name="ufcontentdescription">UFContentDescription</string>
+    <string name="upcoming_features_textView">Upcoming Features</string>
+
+</resources>

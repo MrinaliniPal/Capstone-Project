@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "339802865151",
+    "firebase_url": "https://cureme.firebaseio.com",
+    "project_id": "project-1640209698996193116",
+    "storage_bucket": "project-1640209698996193116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339802865151:android:1f51dcc065f9945f",
+        "android_client_info": {
+          "package_name": "tk.mrinalini.cureme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339802865151-a2q9880oggkpvm731hdsq0hfqtgjqga3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.mrinalini.cureme",
+            "certificate_hash": "0aedbe73edd0c3045fcf3107376d8924f27af3ce"
+          }
+        },
+        {
+          "client_id": "339802865151-igpp1jilve7bf20j8btdc18kjo08vdbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQtKWHsTwcU82IR-YhUzGoONa86FZ2f3M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339802865151-igpp1jilve7bf20j8btdc18kjo08vdbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
