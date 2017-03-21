@@ -9,9 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,10 +28,6 @@ public class UpcomingFeatures extends AppCompatActivity implements LoaderManager
         setSupportActionBar(toolbar);
 
         txt = (TextView) findViewById(R.id.uf_txt);
-
-        AdView adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
 
         getSupportLoaderManager().initLoader(0, null, this).forceLoad();
     }

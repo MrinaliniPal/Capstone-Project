@@ -18,11 +18,11 @@ class ViewPageAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0)
-            return new Disease_Information();
+            return new DiseaseInformation();
         else if (position == 1)
-            return new Home_Remedy();
+            return new HomeRemedy();
         else
-            return new Emergency_Condition();
+            return new EmergencyCondition();
     }
 
     @Override

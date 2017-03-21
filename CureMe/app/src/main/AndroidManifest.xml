@@ -23,12 +23,24 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".UpcomingFeatures"/>
+        <activity
+            android:name=".UpcomingFeatures"
+            android:label="@string/title_uf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".AboutDev"
+            android:label="@string/title_aboutdev"/>
         <activity
             android:name=".SearchResult"
             android:label="@string/title_activity_search_result"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
+        <provider
+            android:name=".DBContentProvider"
+            android:authorities="tk.mrinalini.cureme.DBContentProvider"
+            android:exported="false"
+            android:multiprocess="true"/>
 
         <receiver
             android:name=".SimpleWidgetProvider"

@@ -18,15 +18,15 @@ import static tk.mrinalini.cureme.DBContract.CureMe_DB_Entry.TABLE_NAME;
 
 public class DBContentProvider extends ContentProvider {
 
-    private static final int BOOKINGS = 100;
-    private static final int BOOKING_ID = 110;
+    private static final int SEARCHES = 100;
+    private static final int SEARCH_ID = 110;
     private static final String AUTHORITY = "tk.mrinalini.cureme.DBContentProvider";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + TABLE_NAME);
     private static final UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        uriMatcher.addURI(AUTHORITY, TABLE_NAME, BOOKINGS);
-        uriMatcher.addURI(AUTHORITY, TABLE_NAME + "/#", BOOKING_ID);
+        uriMatcher.addURI(AUTHORITY, TABLE_NAME, SEARCHES);
+        uriMatcher.addURI(AUTHORITY, TABLE_NAME + "/#", SEARCH_ID);
     }
 
     private SQLiteDatabase db;
@@ -49,10 +49,10 @@ public class DBContentProvider extends ContentProvider {
 
         int uriType = uriMatcher.match(uri);
         switch (uriType) {
-            case BOOKING_ID:
+            case SEARCH_ID:
                 queryBuilder.appendWhere(COLUMN_ID + "=" + uri.getLastPathSegment());
                 break;
-            case BOOKINGS:
+            case SEARCHES:
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI");
@@ -89,10 +89,10 @@ public class DBContentProvider extends ContentProvider {
         int uriType = uriMatcher.match(uri);
         int rowsAffected;
         switch (uriType) {
-            case BOOKINGS:
+            case SEARCHES:
                 rowsAffected = db.delete(TABLE_NAME, selection, selectionArgs);
                 break;
-            case BOOKING_ID:
+            case SEARCH_ID:
                 String id = uri.getLastPathSegment();
                 if (TextUtils.isEmpty(selection)) {
                     rowsAffected = db.delete(TABLE_NAME, COLUMN_ID + "=" + id, null);

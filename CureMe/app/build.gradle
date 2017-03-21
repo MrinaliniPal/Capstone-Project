@@ -1,14 +1,4 @@
 apply plugin: 'com.android.application'
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-
-// Initialize a new Properties() object called keystoreProperties.
-def keystoreProperties = new Properties()
-
-// Load your keystore.properties file into the keystoreProperties object.
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-//noinspection GroovyMissingReturnStatement
-
-apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
@@ -21,20 +11,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        config {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file("keyStore.jks")
-            storePassword keystoreProperties['storePassword']
-        }
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
     buildTypes {
         release {
             minifyEnabled false
@@ -44,16 +20,11 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support:design:25.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.18'
-    compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.google.firebase:firebase-ads:10.2.0'
-    compile 'com.google.firebase:firebase-core:10.2.0'
-    compile 'com.google.firebase:firebase-crash:10.2.0'
-    testCompile 'junit:junit:4.12'
 }
-
-
 
 
 apply plugin: 'com.google.gms.google-services'

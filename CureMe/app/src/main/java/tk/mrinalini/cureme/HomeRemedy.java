@@ -3,6 +3,7 @@ package tk.mrinalini.cureme;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,23 +25,25 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Disease_Information extends android.support.v4.app.Fragment {
+public class HomeRemedy extends Fragment {
+    private TextView remedy;
     private String disease;
-    private TextView info;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.disease_info, container, false);
+        View view = inflater.inflate(R.layout.home_remedy, container, false);
 
-        info = (TextView) view.findViewById(R.id.info);
+        remedy = (TextView) view.findViewById(R.id.remedy);
         disease = SearchResult.search;
-        disease_info_fetch();
+        home_remedy_fetch();
+
         return view;
     }
 
-    private void disease_info_fetch() {
+    private void home_remedy_fetch() {
+
         if (Utils.isNetworkAvailable(getContext())) {
-            String disease_info_url = getString(R.string.disease_info_url);
+            String home_remedy_url = getString(R.string.home_remedy_url);
 
             JSONObject params = new JSONObject();
             try {
@@ -49,17 +52,17 @@ public class Disease_Information extends android.support.v4.app.Fragment {
                 e.printStackTrace();
             }
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, disease_info_url, params, new Response.Listener<JSONObject>() {
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, home_remedy_url, params, new Response.Listener<JSONObject>() {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-                        JSONArray detail = response.getJSONArray("information");
+                        JSONArray detail = response.getJSONArray("hremedy");
 
                         if (detail.length() > 0) {
                             for (int i = 0; i < detail.length(); i++) {
                                 JSONObject singledetail = detail.getJSONObject(i);
-                                info.setText(singledetail.getString("info"));
+                                remedy.setText(singledetail.getString("remedy"));
                             }
                         }
                     } catch (JSONException e) {
@@ -86,5 +89,6 @@ public class Disease_Information extends android.support.v4.app.Fragment {
         } else {
             Toast.makeText(getContext(), R.string.no_internet_text, Toast.LENGTH_SHORT).show();
         }
+
     }
 }

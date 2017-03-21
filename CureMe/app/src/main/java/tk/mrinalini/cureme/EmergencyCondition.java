@@ -24,7 +24,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Emergency_Condition extends android.support.v4.app.Fragment {
+public class EmergencyCondition extends android.support.v4.app.Fragment {
     private TextView emergency;
     private String disease;
 

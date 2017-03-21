@@ -15,15 +15,15 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
     <!--UpcomingFeatures.java-->
-    <string name="uf_url">http://138.197.120.102/customer/uf.txt</string>
+    <string name="uf_url">http://138.197.120.102/uf.text</string>
 
     <!--Disease_infomation.java-->
     <string name="disease_info_url">http://138.197.120.102/CureMe/disease_info.php</string>
 
-    <!--Home_Remedy.java-->
+    <!--HomeRemedy.java-->
     <string name="home_remedy_url">http://138.197.120.102/CureMe/home_remedy.php</string>
 
-    <!--Emergency_Condition.java-->
+    <!--EmergencyCondition.java-->
     <string name="emergency_condition_url">http://138.197.120.102/CureMe/emergency_condition.php</string>
 
     <!--AndroidManifest.xml-->
@@ -41,5 +41,14 @@
     <string name="about_developer_textView">About Developer</string>
     <string name="ufcontentdescription">UFContentDescription</string>
     <string name="upcoming_features_textView">Upcoming Features</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="uf">Upcoming Features</string>
+    <string name="aboutDev">About Developer</string>
+    <string name="title_uf">Upcoming Features</string>
+    <string name="title_aboutdev">About Developer</string>
 
 </resources>
